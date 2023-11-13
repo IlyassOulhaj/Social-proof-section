@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+html { 
+    font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.container .description-reviews {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.container .description-reviews .description-section {
+    width: 50%;
+}
+
+.container .description-reviews .description-section h1 {
+    color: hsl(300, 43%, 22%);
+    font-size: 2.667rem;
+    max-width: 15ch;
+    margin-bottom: 20px;
+}
+
+.container .description-reviews .description-section p {
+    color: hsl(303, 10%, 53%);
+    line-height: 1.3;
+    max-width: 40ch;
+    font-weight: 500;
+}
+
+.container .description-reviews .reviews-section {
+    margin-top: 25px;
+    width: 42%
+}
+
+.container .description-reviews .reviews-section div {
+  margin-bottom: 15px;
+  background: hsl(300, 24%, 96%);
+  padding: 15px 25px;
+  border-radius: 8px;
+  width: calc(fit-content + 20px)
+}
+
+.container .description-reviews .reviews-section div:nth-child(2) {
+    transform: translateX(40px)
+}
+
+.container .description-reviews .reviews-section div:nth-child(3) {
+    transform: translateX(80px)
+}
+
+.container .description-reviews .reviews-section div i {
+    color: #ef9546;
+  font-size: 13px;
+}
+
+.container .description-reviews .reviews-section div span {
+    margin-left: 25px;
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+}
+
+.container .buyers-section {
+    display: flex;
+    column-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.buyer-1 ,
+.buyer-2 ,
+.buyer-3 {
+    background: hsl(300, 43%, 22%);
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.buyer-1 div:first-child ,
+.buyer-2 div:first-child ,
+.buyer-3 div:first-child {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.container .buyers-section .buyer-2 {
+    transform: translateY(15px);
+}
+
+.container .buyers-section .buyer-3 {
+    transform: translateY(30px);
+}
+
+.buyer-1 img ,
+.buyer-2 img ,
+.buyer-3 img {
+    width: 15%;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.container .buyers-section p {
+    max-width: 29ch;
+    line-height: 1.2;
+    color: hsl(0, 0%, 100%);
+}
+
+.buyer-1 div div p ,
+.buyer-2 div div p ,
+.buyer-3 div div p {
+    font-weight: 500;
+}
+
+.buyer-1 div div p:last-child ,
+.buyer-2 div div p:last-child ,
+.buyer-3 div div p:last-child {
+    color: hsl(333, 80%, 67%);
+}
+
+@media (max-width: 955px) {
+
+    .container { 
+        width: 100vw;
+    }
+
+    .container .description-reviews  {
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .container .description-reviews .description-section {
+        width: 100%;
+    } 
+
+    .container .description-reviews .reviews-section div:nth-child(2) ,
+    .container .description-reviews .reviews-section div:nth-child(3) {
+        transform: translateX(0);
+    } 
+
+    .container .description-reviews .reviews-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 988px) {
+    .container .buyers-section {
+        justify-content: center;
+    }
+}
